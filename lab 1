@@ -1,0 +1,37 @@
+public class main {
+Int x=5;
+
+void sum () {
+x= x+5;
+System.out.println(x);
+}
+
+public static void main(String[ ] args){
+
+/*main myObj=new main ( )  ;
+System.out.println(myObj.x);
+System.out.println(“Hello World!”);
+myObj.sum();
+myObj.display();
+*/
+
+
+Student myObj= new Student();
+myObj.name=”Rakib”;
+myObj . age=21;
+myObj.cgpa=3.4F;
+myObj.display();
+}
+}
+public class Student {
+String name;
+Int age;
+float cgpa;
+void display()
+{
+System.out.println(name);
+System.out.println(age);
+System.out.println(cgpa);
+}
+}
+
