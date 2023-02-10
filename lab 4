@@ -1,0 +1,39 @@
+public class Box {
+
+        int h;
+        int w;
+        int l;
+        static void area(int h,int w)
+        {
+            System.out.println(h*w);
+
+        }
+        static void area (int h,int w,int l)
+        {
+            System.out.println(h*w*l);
+        }
+
+        void display() {
+            System.out.println("Height" + h);
+            System.out.println("width" + w);
+            System.out.println("length" + l);
+        }
+
+
+        public static void main(String[] args) {
+            Box box1 = new Box();
+            box1.h = 4;
+            box1.w = 10;
+            box1.l = 2;
+            box1.area(box1.h, box1.w);
+            box1.area(box1.h, box1.w, box1.l);
+
+            box1.display();
+
+        }
+
+
+
+
+    }
+
