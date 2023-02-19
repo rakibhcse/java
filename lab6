@@ -1,0 +1,36 @@
+public class Room {
+        int roomno;
+        String roomtype;
+        float roomarea;
+        boolean ACmachine;
+        public Room(){
+            System.out.println("Hello");
+        }
+        public Room (int i,String s,float f,boolean b){
+            this.roomno=i;
+            this.roomtype=s;
+            this.roomarea=f;
+            this.ACmachine=b;
+
+        }
+        void displaydata(){
+            System.out.println(roomno);
+            System.out.println(roomtype);
+            System.out.println(roomarea);
+            System.out.println(ACmachine);
+
+        }
+
+    public static void main(String[] args) {
+        Room newobj=new Room();
+        Room obj= new Room(155,"bedroom",50.0f,true);
+        obj.displaydata();
+
+
+
+
+
+
+
+    }
+    }
