@@ -1,0 +1,168 @@
+//CODE1
+public class AddressInfo {
+    String street,city,state,postalCode;
+
+    public AddressInfo(String street, String city,String state,String postalCode)
+    {
+        this.street=street;
+        this.city=city;
+        this.state=state;
+        this.postalCode=postalCode;
+    }
+}
+public class InsuranceInfo {
+    String policyName;
+    int policyId;
+    public InsuranceInfo(String policyName, int policyId)
+    {
+        this.policyId=policyId;
+        this.policyName=policyName;
+    }
+}
+public class Employeee {
+    String name;
+    AddressInfo addressInfo;
+    InsuranceInfo insuranceInfo;
+    public Employeee(String name, AddressInfo addressInfo, InsuranceInfo insuranceInfo)
+    {
+        this.name=name;
+        this.addressInfo=addressInfo;
+        this.insuranceInfo=insuranceInfo;
+
+    }
+    public void display()
+    {
+        System.out.println("Name of Employee : "+this.name);
+        System.out.println("Address of Employee: "+
+                addressInfo.street+", "+addressInfo.city+", "+
+                addressInfo.state+", "+addressInfo.postalCode);
+        System.out.println("Insurance information: "+
+                insuranceInfo.policyName+", "+insuranceInfo.policyId);
+    }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        AddressInfo addressInfo= new AddressInfo("Sector 10", "Dhanmondi", "Dhaka", "1205");
+        InsuranceInfo insuranceInfo =new InsuranceInfo("Health Insurance", 123);
+        Employeee employeee =new Employeee("Mr. Rakib",addressInfo, insuranceInfo );
+        employeee.display();
+    }
+}
+//CODE2
+
+
+public class Engine {
+    public double capacity;
+    public Engine(double capacity)
+    {
+        this.capacity=capacity;
+    }
+}
+
+public class DashBoard {
+    public double size;
+    public DashBoard(double size)
+    {
+        this.size=size;
+    }
+public class Car1 {
+    public String model;
+    public String company;
+    public void drive() {
+        System.out.println("Driving");
+    }
+    public void stop()
+    {
+        System.out.println("Stopping");
+    }
+
+    
+}
+
+
+public class Volvo extends Car1{
+    double price;
+    String productionYear;
+    String registrationNumber;
+    Engine eng;
+    DashBoard db;
+    public Volvo(double price, String productionYear, String registrationNumber, Engine eng, DashBoard db)
+    {
+        this.price=price;
+        this.productionYear=productionYear;
+        this.registrationNumber=registrationNumber;
+        this.eng=eng;
+        this.db=db;
+    }
+   
+public void changeFuel()
+    {
+        System.out.println("Changing Fuel");
+    }
+    public void checkBattery()
+    {
+        System.out.println("Checking battery");
+    }
+    @Override
+   }
+
+
+public class Main {
+    public static void main(String[] args) {
+        Engine eng = new Engine(54.7);
+        DashBoard db= new DashBoard(5.0);
+        Volvo v=new Volvo(500,"2023", "RAJ1257",eng,db);
+        v.drive();
+        v.stop();
+        v.changeFuel();
+        v.checkBattery();
+        v.model="SUV. XC40";
+        v.company="Volvo";
+
+    }
+}
+//CODE3
+public class Address {  
+String city,state,country;  
+  
+public Address(String city, String state, String country) {  
+    this.city = city;  
+    this.state = state;  
+    this.country = country;  
+}  
+  
+}  
+
+
+
+
+public class Emp {  
+int id;  
+String name;  
+Address address;  
+  
+public Emp(int id, String name,Address address) {  
+    this.id = id;  
+    this.name = name;  
+    this.address=address;  
+}  
+  
+void display(){  
+System.out.println(id+" "+name);  
+System.out.println(address.city+" "+address.state+" "+address.country);  
+}   
+public static void main(String[] args) {  
+Address address1=new Address("gzb","UP","india");  
+Address address2=new Address("gno","UP","india");  
+  
+Emp e=new Emp(111,"varun",address1);  
+Emp e2=new Emp(112,"arun",address2);  
+      
+e.display();  
+e2.display();  
+      
+}  
+}  
+
+
